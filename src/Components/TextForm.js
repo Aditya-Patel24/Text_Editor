@@ -19,7 +19,7 @@ export default function TextForm() {
   const handleOnchange = (event) => {
     setText(event.target.value);
   };
-  const [text, setText] = useState("Enter Text Here")";
+  const [text, setText] = useState("Enter Text Here");
   return (
     <>
       <div className="container" mx-2 >
