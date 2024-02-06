@@ -48,7 +48,7 @@ export default function TextForm() {
         <p>No of alphabets are {text.length}</p>
         <p>Approx {0.008 * text.split(" ").length} Minituse required to read</p>
 
-        <h3>Text Preview</h3>
+        <h3>Your Text Preview</h3>
         <p>{text}</p>
       </div>
     </>
