@@ -4,17 +4,14 @@ export default function TextForm() {
   const onUpper = () => {
     let newText = text.toUpperCase();
     setText(newText);
-    console.log(newText);
   };
   const onLower = () => {
     let newText = text.toLowerCase();
     setText(newText);
-    console.log(newText);
   };
   const onClear = () => {
     let newText = "";
     setText(newText);
-    console.log(newText);
   };
   const handleOnchange = (event) => {
     setText(event.target.value);
@@ -22,10 +19,11 @@ export default function TextForm() {
   const [text, setText] = useState("Enter Text Here");
   return (
     <>
-      <div className="container" mx-2 >
-        <label htmlFor="exampleFormControlTextarea1" className="form-label">
-         
-        </label>
+      <div className="container" mx-2>
+        <label
+          htmlFor="exampleFormControlTextarea1"
+          className="form-label"
+        ></label>
         <div>
           <textarea
             className="form-control"
@@ -44,13 +42,14 @@ export default function TextForm() {
         <button className="btn btn-primary mx-3 my-3" onClick={onClear}>
           Clear
         </button>
-      <h3>Your text details</h3>
-     <b>
-       <p>No of Words are { text.split(" ").length }</p>
-      <p>No of alphabets are { text.length }</p>
-    </b>
-      <h3>Text Preview</h3>
-      <p>{text}</p>
+        <h3>Your text details</h3>
+
+        <p>No of Words are {text.split(" ").length}</p>
+        <p>No of alphabets are {text.length}</p>
+        <p>Approx {0.008 * text.split(" ").length} Minituse required to read</p>
+
+        <h3>Text Preview</h3>
+        <p>{text}</p>
       </div>
     </>
   );
