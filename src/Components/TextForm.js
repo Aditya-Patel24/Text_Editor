@@ -17,9 +17,13 @@ export default function TextForm() {
     setText(event.target.value);
   };
   const [text, setText] = useState("Enter Text Here");
+  let myP={
+color:"cyan",
+border: "1px solid black"
+  }
   return (
     <>
-      <div className="container" mx-2>
+      <div className="container"mx-2>
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
@@ -43,13 +47,11 @@ export default function TextForm() {
           Clear
         </button>
         <h3>Your text details</h3>
-
         <p>No of Words are {text.split(" ").length}</p>
         <p>No of alphabets are {text.length}</p>
         <p>Approx {0.008 * text.split(" ").length} Minituse required to read</p>
-
-        <h3>Your Text Preview</h3>
-        <p>{text}</p>
+        <h3>Your Text Preview Here</h3>
+        <p style={myP}>{text}</p>
       </div>
     </>
   );
