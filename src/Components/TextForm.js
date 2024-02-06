@@ -11,20 +11,20 @@ export default function TextForm() {
     setText(newText);
     console.log(newText);
   };
-  const onLength = () => {
-    let newText = text.length;
+  const onClear = () => {
+    let newText = "";
     setText(newText);
     console.log(newText);
   };
   const handleOnchange = (event) => {
     setText(event.target.value);
   };
-  const [text, setText] = useState("Enter here");
+  const [text, setText] = useState("Enter Text Here");
   return (
     <>
-      <div>
+      <div className="container" mx-2 >
         <label htmlFor="exampleFormControlTextarea1" className="form-label">
-          Example textarea
+         
         </label>
         <div>
           <textarea
@@ -41,9 +41,16 @@ export default function TextForm() {
         <button className="btn btn-primary mx-3 my-3" onClick={onLower}>
           Lowercase
         </button>
-        <button className="btn btn-primary mx-3 my-3" onClick={onLength}>
-          Length
+        <button className="btn btn-primary mx-3 my-3" onClick={onClear}>
+          Clear
         </button>
+      <h3>Your text details</h3>
+     <b>
+       <p>No of Words are { text.split(" ").length }</p>
+      <p>No of alphabets are { text.length }</p>
+    </b>
+      <h3>Text Preview</h3>
+      <p>{text}</p>
       </div>
     </>
   );
