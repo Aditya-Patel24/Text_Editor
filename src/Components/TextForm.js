@@ -12,6 +12,7 @@ export default function TextForm() {
   const onClear = () => {
     let newText = "";
     setText(newText);
+    console.log(text.split(" "))
   };
   const handleOnchange = (event) => {
     setText(event.target.value);
@@ -23,7 +24,7 @@ border: "1px solid black"
   }
   return (
     <>
-      <div className="container"mx-2>
+      <div className="container mx-2">
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
@@ -37,13 +38,13 @@ border: "1px solid black"
             rows="12"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-3 my-3" onClick={onUpper}>
+        <button className="btn btn-primary mx-2 my-2 " onClick={onUpper}>
           Uppercase
         </button>
-        <button className="btn btn-primary mx-3 my-3" onClick={onLower}>
+        <button className="btn btn-primary mx-2 my-2 " onClick={onLower}>
           Lowercase
         </button>
-        <button className="btn btn-primary mx-3 my-3" onClick={onClear}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onClear}>
           Clear
         </button>
         <h3>Your text details</h3>

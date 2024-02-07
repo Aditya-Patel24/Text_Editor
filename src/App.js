@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar title="Aditya" />
-      <div className="container" mx-3></div>
+      <div className="container mx-3" ></div>
       <TextForm/>
     </>
   );
