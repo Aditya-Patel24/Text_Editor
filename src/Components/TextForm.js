@@ -18,13 +18,30 @@ export default function TextForm() {
     setText(event.target.value);
   };
   const [text, setText] = useState("Enter Text Here");
-  let myP={
+let myP={
 color:"cyan",
-border: "1px solid black"
+border: "1px solid black",
   }
+  const[mystyle, setMystyle]=useState({
+    color:"white",
+    border: "1px solid black",
+    backgroundColor:"black",
+      })
+   const toggleonClick =()=>{
+        if(mystyle.color ==="white")
+        setMystyle({
+          color:"black",
+          backgroundColor:'white'
+        })
+        else{
+         setMystyle({ color:"white"
+          ,backgroundColor:"black"})
+        }
+      }
+
   return (
     <>
-      <div className="container mx-2">
+      <div className="container mx-2 my-2 " style={mystyle}>
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
@@ -47,12 +64,15 @@ border: "1px solid black"
         <button className="btn btn-primary mx-2 my-2" onClick={onClear}>
           Clear
         </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>
+          ChangeMode
+        </button>
         <h3>Your text details</h3>
         <p>No of Words are {text.split(" ").length}</p>
         <p>No of alphabets are {text.length}</p>
-        <p>Approx {0.008 * text.split(" ").length} Minituse required to read</p>
+        <p>Approx {0.008 * text.split(" ").length} Minitues required to read</p>
         <h3>Your Text Preview Here</h3>
-        <p style={myP}>{text}</p>
+        <p className="mx-2" style={myP}>{text}</p>
       </div>
     </>
   );
