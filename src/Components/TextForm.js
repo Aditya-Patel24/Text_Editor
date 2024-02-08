@@ -23,19 +23,20 @@ color:"cyan",
 border: "1px solid black",
   }
   const[mystyle, setMystyle]=useState({
-    color:"white",
+    color:"black",
     border: "1px solid black",
-    backgroundColor:"black",
+    backgroundColor:"white"
       })
    const toggleonClick =()=>{
-        if(mystyle.color ==="white")
+        if(mystyle.color === "white")
         setMystyle({
           color:"black",
-          backgroundColor:'white'
+          border: "1px solid black",
+          backgroundColor:"white"
         })
         else{
-         setMystyle({ color:"white"
-          ,backgroundColor:"black"})
+         setMystyle({ color:"white",
+         backgroundColor:"black"})
         }
       }
 
