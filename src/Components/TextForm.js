@@ -71,7 +71,7 @@ border: "1px solid black",
         </button>
         <h3>Your text details</h3>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
-        <p>No of alphabets are {text.filter((element)=>{return element.length!==0}).length}</p>
+        <p>No of alphabets are {text.length}</p>
         <p>Approx {0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minitues required to read</p>
         <h3>Your Text Preview Here</h3>
         <p className="mx-2" style={myP}>{text}</p>
