@@ -52,7 +52,7 @@ border: "1px solid black",
       }
   return (
     <>
-      <div className="container mx-2 my-2 " style={mystyle}>
+      <div className="container mx-2 my-2" style={mystyle}>
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
