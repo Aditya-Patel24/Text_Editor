@@ -45,14 +45,10 @@ border: "1px solid black",
         speech.text = text;
         window.speechSynthesis.speak(speech);
       }
-      const onCopy =()=>{
-        let text = document.getElementById("exampleFormControlTextarea1");
-        text.select();
-        navigator.clipboard.writeText(text.value);
-      }
+      
   return (
     <>
-      <div className="container mx-2 my-2" style={mystyle}>
+      <div className="container mx-2 my-2 " style={mystyle}>
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
