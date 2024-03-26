@@ -76,6 +76,9 @@ border: "1px solid black",
         <button className="btn btn-primary mx-2 my-2" onClick={onspeech}>
           Speak
         </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={onspeech}>
+          Speak
+        </button>
         <h3>Your text details</h3>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
         <p>No of alphabets are {text.length}</p>
