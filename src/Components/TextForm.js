@@ -45,10 +45,15 @@ border: "1px solid black",
         speech.text = text;
         window.speechSynthesis.speak(speech);
       }
+     const copy =()=>{
+        var text = document.getElementById("exampleFormControlTextarea1");
+        text.select();
+        navigator.clipboard.writeText(text.value);
+      }
       
   return (
     <>
-      <div className="container mx-2 my-2 " style={mystyle}>
+      <div className="container mx-2 my-2" style={mystyle}>
         <label
           htmlFor="exampleFormControlTextarea1"
           className="form-label"
@@ -76,9 +81,6 @@ border: "1px solid black",
         </button>
         <button className="btn btn-primary mx-2 my-2" onClick={onspeech}>
           Speak
-        </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={onCopy}>
-          Copy
         </button>
         <h3>Your text details</h3>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
