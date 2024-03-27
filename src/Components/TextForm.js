@@ -45,7 +45,7 @@ border: "1px solid black",
         speech.text = text;
         window.speechSynthesis.speak(speech);
       }
-     const copy =()=>{
+     const oncopy =()=>{
         var text = document.getElementById("exampleFormControlTextarea1");
         text.select();
         navigator.clipboard.writeText(text.value);
@@ -73,14 +73,17 @@ border: "1px solid black",
         <button className="btn btn-primary mx-2 my-2 " onClick={onLower}>
           Lowercase
         </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={oncopy}>
+          Copy
+        </button>
         <button className="btn btn-primary mx-2 my-2" onClick={onClear}>
           Clear
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>
-          ChangeMode
-        </button>
         <button className="btn btn-primary mx-2 my-2" onClick={onspeech}>
           Speak
+        </button>
+        <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>
+          ChangeMode
         </button>
         <h3>Your text details</h3>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
