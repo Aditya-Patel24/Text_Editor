@@ -45,7 +45,7 @@ border: "1px solid black",
         speech.text = text;
         window.speechSynthesis.speak(speech);
       }
-     const oncopy =()=>{
+     const onCopy =()=>{
         var text = document.getElementById("exampleFormControlTextarea1");
         text.select();
         navigator.clipboard.writeText(text.value);
@@ -76,7 +76,7 @@ border: "1px solid black",
         <button className="btn btn-primary mx-2 my-2 " onClick={onLower}>
           Lowercase
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={oncopy}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onCopy}>
           Copy
         </button>
         <button className="btn btn-primary mx-2 my-2" onClick={onClear}>
