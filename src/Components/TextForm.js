@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
 export default function TextForm() {
+  const [searchTerm, setSearchTerm] = useState(''); 
+  const onSearch = () => {
+    const count = text.split(/\s+/).filter(word => word === searchTerm).length;
+    alert(`The word "${searchTerm}" occurs ${count} times.`);
+  }
   const onUpper = () => {
     let newText = text.toUpperCase();
     setText(newText);
@@ -17,7 +22,7 @@ export default function TextForm() {
   const handleOnchange = (event) => {
     setText(event.target.value);
   };
-  const [text, setText] = useState("Enter Text Here");
+  const [text, setText] = useState("");
 let myP={
 color:"cyan",
 border: "1px solid black",
@@ -62,13 +67,7 @@ border: "1px solid black",
           className="form-label"
         ></label>
         <div>
-          <textarea
-            className="form-control"
-            value={text}
-            onChange={handleOnchange}
-            id="exampleFormControlTextarea1"
-            rows="12"
-          ></textarea>
+          <textarea className="form-control" value={text} onChange={handleOnchange} id="exampleFormControlTextarea1" rows="12" placeholder="Enter your text here" ></textarea>
         </div>
         <button className="btn btn-primary mx-2 my-2 " onClick={onUpper}>
           Uppercase
@@ -91,6 +90,8 @@ border: "1px solid black",
         <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>
           ChangeMode
         </button>
+        <input className=" m-2 " style={{width:"200px", border: '1px solid #ccc', borderRadius: '4px', padding: '6px 12px'}} type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Enter word to search" />
+        <button className="btn btn-outline-primary" onClick={onSearch}>Search</button>
         <h3>Your text details</h3>
         <p>No of characters are {text.replace(/\s+/g, '').length}</p>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
