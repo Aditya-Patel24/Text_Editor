@@ -40,7 +40,7 @@ border: "1px solid black",
         }
       }
 
-      const onspeech =()=>{
+      const onSpeech =()=>{
         let speech = new SpeechSynthesisUtterance();
         speech.text = text;
         window.speechSynthesis.speak(speech);
@@ -85,7 +85,7 @@ border: "1px solid black",
         <button className="btn btn-primary mx-2 my-2" onClick={onRemoveExtraSpaces}>
           Remove Extra Spaces
         </button>
-        <button className="btn btn-primary mx-2 my-2" onClick={onspeech}>
+        <button className="btn btn-primary mx-2 my-2" onClick={onSpeech}>
           Speak
         </button>
         <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>
