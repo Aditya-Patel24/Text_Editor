@@ -75,7 +75,7 @@ borderRadius:"4px"
         <button className="btn btn-primary mx-2 my-2" onClick={onClear}>Clear</button>
         <button className="btn btn-primary mx-2 my-2" onClick={onRemoveExtraSpaces}>Remove Extra Spaces</button>
         <button className="btn btn-primary mx-2 my-2" onClick={onSpeech}>Speak</button>
-        <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}> ChangeMode</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={toggleonClick}>ChangeMode</button>
         <input className=" m-2 " style={{width:"200px", border:'1px solid #ccc', borderRadius: '4px', padding: '6px 12px'}} type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Enter word to search" />
         <button className="btn btn-outline-primary" onClick={onSearch}>Search</button>
         <div ClassName="text-container">
