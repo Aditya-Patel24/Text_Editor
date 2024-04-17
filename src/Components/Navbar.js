@@ -18,8 +18,7 @@ export default function Navbar(props) {
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -28,9 +27,7 @@ export default function Navbar(props) {
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  About
-                </a>
+                <a className="nav-link" href="/">About</a>
               </li>
             </ul>
           </div>

@@ -59,7 +59,6 @@ borderRadius:"4px"
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
     }
-    
   return (
     <div className="out-container">
       <div className="container mx-2 my-2" style={mystyle}>
@@ -79,7 +78,7 @@ borderRadius:"4px"
         <input className=" m-2 " style={{width:"200px", border:'1px solid #ccc', borderRadius: '4px', padding: '6px 12px'}} type="text" value={searchTerm} onChange={e => setSearchTerm(e.target.value)} placeholder="Enter word to search" />
         <button className="btn btn-outline-primary" onClick={onSearch}>Search</button>
         <div ClassName="text-container">
-          <br/>
+        <br/>
         <h3>Your text details</h3>
         <p>No of characters are {text.replace(/\s+/g, '').length}</p>
         <p>No of Words are {text.split(/\s+/).filter((element)=>{return element.length!==0}).length}</p>
