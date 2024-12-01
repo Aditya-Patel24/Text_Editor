@@ -41,7 +41,7 @@ border: "1px solid black",
         })
         else{
          setMystyle({ color:"white",
-         backgroundColor:"black"})
+         backgroundColor:"slate"})
         }
       }
 
